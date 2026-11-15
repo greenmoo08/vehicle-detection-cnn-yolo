@@ -16,7 +16,6 @@
 │   ├── train_yolo.py         # YOLOv8n 탐지 + 조건별 실험
 │   ├── visualize_results.py  # 결과 그래프
 │   └── predict.py            # 예측 + 근접 차량 경고
-├── prompts/prompt_design.md  # 생성형 AI 프롬프트 설계·개선 기록
 ├── figures/                  # 그래프·예측 이미지
 ├── results/                  # 실험 CSV/JSON
 ├── roboflow_upload/          # Roboflow 업로드용 YOLO 포맷 데이터셋
