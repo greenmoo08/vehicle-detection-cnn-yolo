@@ -1,0 +1,6 @@
+image,cls,conf,area_ratio,in_path,near_warning
+000000000094.jpg,car,0.928,0.0035,True,False
+000000000094.jpg,truck,0.356,0.0178,False,False
+000000000307.jpg,car,0.792,0.0017,False,False
+000000000529.jpg,motorcycle,0.949,0.3127,True,True
+000000000650.jpg,car,0.676,0.222,True,True

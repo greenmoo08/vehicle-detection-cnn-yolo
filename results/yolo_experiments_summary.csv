@@ -1,0 +1,10 @@
+exp,weights,aug,n_train,imgsz,epochs,precision,recall,mAP50,mAP50_95,train_sec,extra,last_mAP50_95
+E1_scratch_640_aug_15ep,yolov8n.yaml,True,60,640,15,0.001,0.3333,0.0012,0.0002,389.1,{},0.00015
+E2_pre_320_noaug_15ep,yolov8n.pt,False,15,320,15,0.439,0.9167,0.9117,0.5854,33.3,{},0.12838
+E3_pre_320_aug_15ep,yolov8n.pt,True,60,320,15,0.5148,0.9167,0.6906,0.452,107.0,{},0.19371
+E4_pre_640_noaug_15ep,yolov8n.pt,False,15,640,15,0.69,0.9167,0.9117,0.7625,119.2,{},0.20667
+E5_pre_640_aug_15ep,yolov8n.pt,True,60,640,15,0.5474,0.9167,0.6938,0.5197,415.6,{},0.3309
+E6_pre_640_noaug_30ep,yolov8n.pt,False,15,640,30,0.69,0.9167,0.9117,0.7625,234.6,{},0.40774
+E7_pre_640_noaug_30ep_fix,yolov8n.pt,False,15,640,30,0.3857,0.8333,0.6129,0.4497,234.1,"{""nbs"": 8, ""lr0"": 0.001, ""warmup_epochs"": 1}",0.02395
+E8_pre_640_noaug_15ep_freeze,yolov8n.pt,False,15,640,15,0.7374,0.9167,0.9117,0.7542,84.2,"{""freeze"": 10, ""optimizer"": ""SGD"", ""lr0"": 0.001, ""nbs"": 8, ""warmup_epochs"": 0}",0.72508
+E9_pre_640_aug_15ep_freeze,yolov8n.pt,True,60,640,15,0.6101,0.9167,0.8596,0.7177,287.7,"{""freeze"": 10, ""optimizer"": ""SGD"", ""lr0"": 0.001, ""nbs"": 8, ""warmup_epochs"": 0}",0.66038

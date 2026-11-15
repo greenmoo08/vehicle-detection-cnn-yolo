@@ -1,0 +1,15 @@
+{
+ "exp": "E8_pre_640_noaug_15ep_freeze",
+ "weights": "yolov8n.pt",
+ "aug": "False",
+ "n_train": "15",
+ "imgsz": "640",
+ "epochs": "15",
+ "precision": "0.7374",
+ "recall": "0.9167",
+ "mAP50": "0.9117",
+ "mAP50_95": "0.7542",
+ "train_sec": "84.2",
+ "extra": "{\"freeze\": 10, \"optimizer\": \"SGD\", \"lr0\": 0.001, \"nbs\": 8, \"warmup_epochs\": 0}",
+ "last_mAP50_95": 0.72508
+}
