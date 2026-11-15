@@ -1,0 +1,6 @@
+raw/
+data/
+runs/
+*.pt
+__pycache__/
+coco128.zip
