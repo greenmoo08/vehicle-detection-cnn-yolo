@@ -1,0 +1,38 @@
+name: Run vehicle detection
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "quick = YOLO E8만 (약 5분) / full = YOLO 실험 9개 (약 40분)"
+        type: choice
+        options: [quick, full]
+        default: quick
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: 한글 폰트 설치
+        run: sudo apt-get update -q && sudo apt-get install -y -q fonts-noto-cjk
+      - name: 라이브러리 설치 (CPU용 PyTorch)
+        run: |
+          pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt
+      - name: 파이프라인 실행
+        run: bash run_all.sh ${{ inputs.mode }}
+      - name: 결과 업로드
+        uses: actions/upload-artifact@v4
+        with:
+          name: results-${{ inputs.mode }}
+          path: |
+            figures/
+            results/
+            runs/*/results.csv
+            runs/*/weights/best.pt
