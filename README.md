@@ -23,6 +23,13 @@
 ```
 
 ## 3. 실행 방법
+
+### GitHub에서 바로 실행 (설치 필요 없음)
+**Actions (버튼으로 실행):** 위쪽 Actions 탭 → Run vehicle detection → Run workflow → quick(약 6분, YOLO는 최적 조건 E8만) 또는 full(약 40분, YOLO 실험 9개) 선택 → 실행이 끝나면 실행 페이지 아래 Artifacts에서 results 파일(그래프·결과)을 내려받기
+
+**Codespaces (브라우저 속 VS Code):** Code 버튼 → Codespaces → Create codespace on main → 라이브러리 자동 설치가 끝나면 터미널에서 `bash run_all.sh` 입력 (전체 실험은 `bash run_all.sh full`)
+
+### 내 PC에서 실행
 ```bash
 pip install -r requirements.txt
 # COCO128 다운로드 → raw/coco128
